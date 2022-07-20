@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private int fall_frames;
     private bool drop_needed;
     private bool grounded;
+    [SerializeField] float air_mod = 0.01f; //Weight on in air movement.
+    
    
     
     public bool jumping;
@@ -48,6 +50,8 @@ public class PlayerController : MonoBehaviour
         grounded = true;
         fall_frames = 0;
         drop_needed = false;
+        
+
     }
 
     void Update()
@@ -117,10 +121,10 @@ public class PlayerController : MonoBehaviour
         if (jumping == true)
         {
 
-            ChangeX = Input.GetAxisRaw("Horizontal")*.005f;//This lets the player control jumping a little
+            ChangeX = Input.GetAxisRaw("Horizontal")*air_mod;//This lets the player control jumping a little
                                                           //bit more by leaning in a direction lean out to go further,
                                                           //lean in to shorten, lean in a new direction to curve it
-            ChangeY = Input.GetAxisRaw("Vertical")*.005f;
+            ChangeY = Input.GetAxisRaw("Vertical")*air_mod;
             body.velocity = new Vector2(body.velocity.x+ChangeX,body.velocity.y+ChangeY); 
         }
         if (jumped > 0.0f)
@@ -139,14 +143,14 @@ public class PlayerController : MonoBehaviour
 
 
         //player cannot go above or below certain y
-        if (body.transform.position.y > 15f)
-        {
-            body.transform.position = new Vector2(transform.position.x,15f);
-        }
-        if (body.transform.position.y <0f)
-        {
-            body.transform.position = new Vector2(transform.position.x,0f);
-        }
+        //if (body.transform.position.y > 15f)
+        //{
+        //    body.transform.position = new Vector2(transform.position.x,15f);
+        //}
+        //if (body.transform.position.y <0f)
+        //{
+        //    body.transform.position = new Vector2(transform.position.x,0f);
+        //}
         //player cannot go above or below certain x
         if (body.transform.position.x > 12.3f)
         {
@@ -189,7 +193,7 @@ public class PlayerController : MonoBehaviour
          * */
         if (jumping == true || grounded == true) //The player is always dry if they are jumping or on a platform
         {
-            grace = 0.25f; //FIxed update is 50fps, this gives player (grace/.01) frames to react before they will die
+            grace = 0.1f; //FIxed update is 50fps, this gives player (grace/.01) frames to react before they will die
 
         }
         else
@@ -224,7 +228,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Die(string How)
+    public void Die(string How) //Maybe move to a game manager
     {
         body.velocity = new Vector2(0, 0);
         anim.SetFloat("Horizontal", 0f);
