@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 
@@ -33,10 +34,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float air_mod = 0.01f; //Weight on in air movement.
     [SerializeField] GameObject DeathScreen;
     [SerializeField] GameObject gameController;
+    [SerializeField] TMP_Text HighScore;
+    [SerializeField] TMP_Text FinalSCore;
+
     private GameController GC;
+    private float highScore;
 
 
-
+    public bool Playeralive;
     public bool jumping;
     public float runSpeed = 5.0f;
     public float jump_length = 100.0f; // jump length is the starting position
@@ -55,7 +60,8 @@ public class PlayerController : MonoBehaviour
         drop_needed = false;
         DeathScreen.SetActive(false);
         GC = gameController.GetComponent<GameController>();
-
+        Playeralive = true;
+        highScore = PlayerPrefs.GetFloat("highScore");
     }
 
     void Update()
@@ -235,13 +241,21 @@ public class PlayerController : MonoBehaviour
 
     public void Die(string How) //Maybe move to a game manager
     {
+        if(GC.score > highScore) {
+            highScore = GC.score;
+            PlayerPrefs.SetFloat("highScore", highScore);
+        }
         body.velocity = new Vector2(0, 0);
         anim.SetFloat("Horizontal", 0f);
         anim.SetFloat("Vertical", 0f);
         DeathScreen.SetActive(true);
         Debug.Log("You Have Died by"+ How);
         GC.PauseGame();
+        HighScore.text = "Your highscore is " + highScore;
+        FinalSCore.text = "Your Score was " + GC.score;
 
+
+        Playeralive = false;
     }
 
 
