@@ -1,28 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject Platform;
-    public GameObject Powerup;
+    public GameObject[] Platforms;
+    public GameObject[] Powerups;
     [SerializeField] private GameObject player;
-
-
+    [SerializeField] private GameObject blackdog;
+    [SerializeField] private TMP_Text CurrentScore;
     private PlayerController playerController;
+    private BlackDogBehaviour dogcontroller;
     private float GenX;
     private float GenY;
     private float rs;
     private bool isPaused = false;
+    public int score;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
         Application.targetFrameRate = 50; //This should stop jumping acting differently on different platforms.
-        Instantiate(Platform, new Vector3(0, 30, 2),Quaternion.identity);
+        Instantiate(Platforms[0], new Vector3(0, 30, 2),Quaternion.identity);
         StartCoroutine(ItemGenerator());
         StartCoroutine(PlatformGenerator());
+        StartCoroutine(Score());
         playerController = player.GetComponent<PlayerController>();
+        dogcontroller = blackdog.GetComponent<BlackDogBehaviour>();
         rs = playerController.runSpeed;
         Time.timeScale = 1.0f;
     }
@@ -34,11 +42,17 @@ public class GameController : MonoBehaviour
         {
             PauseGame();
         }
+        
     }
 
     IEnumerator ItemGenerator()
     {
-        yield return new WaitForSeconds(5);
+        while (true)
+        {
+            GameObject Powerup = Powerups[Random.Range(0, Powerups.Length)];
+            Instantiate(Powerup, new Vector3(0, 25, 0), Quaternion.identity);
+            yield return new WaitForSeconds(10);
+        }
     }
 
     IEnumerator PlatformGenerator()
@@ -62,8 +76,9 @@ public class GameController : MonoBehaviour
             float MaxY = Ypos + 2f + (1.5f*rs);
             GenX = Random.Range(MinX,MaxX);
             GenY = Random.Range(MinY,MaxY);
+            GameObject Platform = Platforms[Random.Range(0, Platforms.Length)];
             Instantiate(Platform, new Vector3(GenX, GenY, 2),Quaternion.identity);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
 
     }
@@ -103,6 +118,26 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+    public void pickup(string what)
+    {
+        if (what == "Wolfsbane")
+        {
+            blackdog.transform.position = new Vector3(0, -30, 0);
+        }
+    }
 
+    IEnumerator Score()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if (player.GetComponent<PlayerController>().Playeralive == true)
+            {
+                score += 1;
+                CurrentScore.text = string.Concat("Score: ", score);
+                
+            }
+        }
+    }
 
 }

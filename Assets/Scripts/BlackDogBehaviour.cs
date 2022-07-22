@@ -6,7 +6,7 @@ public class BlackDogBehaviour : MonoBehaviour
 {
     private bool dogactive;
     [SerializeField] float chasedistance = 5.0f;
-    [SerializeField] float dogspeed = 5.0f;
+    public float dogspeed = 5.0f;
     [SerializeField] float dogwait = 5.0f;
     private float step;
     private GameObject target;
@@ -39,14 +39,13 @@ public class BlackDogBehaviour : MonoBehaviour
             {
                 target = Player;
             }
-            Debug.Log("Before:" + dogsbody.transform.position);
             dogsbody.transform.position = Vector3.MoveTowards(dogsbody.transform.position, new Vector3(target.transform.position.x,target.transform.position.y,0), step);
-            Debug.Log("After:" + dogsbody.transform.position);
+            
         }
     }
 
 
-    IEnumerator WaitToStart()
+    IEnumerator WaitToStart() //Wait a few seconds to let player get hang of game
     {
         yield return new WaitForSeconds(dogwait);
         dogactive = true;
@@ -76,7 +75,7 @@ public class BlackDogBehaviour : MonoBehaviour
         return closest;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //Dog can kill player
     {
         if (other.tag == "Player")
         {

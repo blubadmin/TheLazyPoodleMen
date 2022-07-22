@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConstantMotionController : MonoBehaviour
 {
-    private float scroll_speed = 3.0f;
+    [SerializeField] float scroll_speed = 3.0f;
     private float scroll_time;
     private GameObject Owner;
 
