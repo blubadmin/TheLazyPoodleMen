@@ -31,9 +31,12 @@ public class PlayerController : MonoBehaviour
     private bool drop_needed;
     private bool grounded;
     [SerializeField] float air_mod = 0.01f; //Weight on in air movement.
-    
-   
-    
+    [SerializeField] GameObject DeathScreen;
+    [SerializeField] GameObject gameController;
+    private GameController GC;
+
+
+
     public bool jumping;
     public float runSpeed = 5.0f;
     public float jump_length = 100.0f; // jump length is the starting position
@@ -50,7 +53,8 @@ public class PlayerController : MonoBehaviour
         grounded = true;
         fall_frames = 0;
         drop_needed = false;
-        
+        DeathScreen.SetActive(false);
+        GC = gameController.GetComponent<GameController>();
 
     }
 
@@ -103,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
         }
         if (Input.GetButtonDown("Jump")) {
-            Debug.Log("Button Down");
+            //Debug.Log("Button Down");
             if (jumping == false && grounded == true)//jump up
             {
                 anim.SetBool("jumping", true);
@@ -111,7 +115,8 @@ public class PlayerController : MonoBehaviour
                 jumped = jump_length;
                 hop_frames = 10f;
             }
-            else { Debug.Log("Cannot Jump"); }
+            else { //Debug.Log("Cannot Jump");
+                   }
         }
         if (Input.GetButtonUp("Jump")) //shorter jumps
         {
@@ -177,7 +182,7 @@ public class PlayerController : MonoBehaviour
         }
         if (fall_frames > 0)
         {
-            fall_frames -= 1; body.transform.position = new Vector2(transform.position.x, transform.position.y - 0.1f);Debug.Log(fall_frames);
+            fall_frames -= 1; body.transform.position = new Vector2(transform.position.x, transform.position.y - 0.1f);//Debug.Log(fall_frames);
         }
 
 
@@ -233,11 +238,9 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(0, 0);
         anim.SetFloat("Horizontal", 0f);
         anim.SetFloat("Vertical", 0f);
-        if (How == "water")
-        {
-            //You have drowned
-            Debug.Log("You Have Died: Drowning");
-        }
+        DeathScreen.SetActive(true);
+        Debug.Log("You Have Died by"+ How);
+        GC.PauseGame();
 
     }
 

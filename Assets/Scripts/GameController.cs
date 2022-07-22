@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     private float GenX;
     private float GenY;
     private float rs;
+    private bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,16 @@ public class GameController : MonoBehaviour
         StartCoroutine(PlatformGenerator());
         playerController = player.GetComponent<PlayerController>();
         rs = playerController.runSpeed;
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Cancel"))
+        {
+            PauseGame();
+        }
     }
 
     IEnumerator ItemGenerator()
@@ -85,7 +90,19 @@ public class GameController : MonoBehaviour
         }
     }
         
-
+    public void PauseGame()
+    {
+        if (isPaused == false)
+        {
+            isPaused = true;
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            isPaused = false;
+            Time.timeScale = 1.0f;
+        }
+    }
 
 
 }
