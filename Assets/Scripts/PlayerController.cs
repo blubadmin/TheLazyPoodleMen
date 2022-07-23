@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class PlayerController : MonoBehaviour
 
 {
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private GameController GC;
     private float highScore;
-
+    FMOD.Studio.EventInstance playerJump;
 
     public bool Playeralive;
     public bool jumping;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
         GC = gameController.GetComponent<GameController>();
         Playeralive = true;
         highScore = PlayerPrefs.GetFloat("highScore");
+        playerJump = FMODUnity.RuntimeManager.CreateInstance("event:/player/fx_player_jump");
     }
 
     void Update()
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("jumping", true);
                 jumping = true;
                 jumped = jump_length;
+                playerJump.start();
                 hop_frames = 10f;
             }
             else { //Debug.Log("Cannot Jump");
