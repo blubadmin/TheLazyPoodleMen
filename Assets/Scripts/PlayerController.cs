@@ -49,6 +49,16 @@ public class PlayerController : MonoBehaviour
     public float jump_up = 0.5f; //jump_up is a multiplier of jump length that shortens the jump when button released quickly
                                     
     public LayerMask Groundlayer;
+    private GameObject shadow;
+    private Rigidbody2D shadowtransform;
+    private bool doonce;
+
+    // FMOD Class definitions
+    FMOD.Studio.EventInstance playerJump;
+    FMOD.Studio.EventInstance playerSplash;
+    FMOD.Studio.EventInstance playerLand;
+
+    FMOD.Studio.EventInstance playerFootsteps;
 
     void Start()
     {
@@ -62,6 +72,18 @@ public class PlayerController : MonoBehaviour
         GC = gameController.GetComponent<GameController>();
         Playeralive = true;
         highScore = PlayerPrefs.GetFloat("highScore");
+        shadow = body.transform.GetChild(0).gameObject;
+        shadowtransform = shadow.GetComponent<Rigidbody2D>();
+        shadow.SetActive(false);
+        playerJump = FMODUnity.RuntimeManager.CreateInstance("event:/player/fx_player_jump");
+        playerSplash = FMODUnity.RuntimeManager.CreateInstance("event:/environment/fx_river_splash");
+        playerLand = FMODUnity.RuntimeManager.CreateInstance("event:/player/fx_player_land");
+        playerFootsteps = FMODUnity.RuntimeManager.CreateInstance("event:/player/fx_player_footsteps");
+        playerFootsteps.setParameterByNameWithLabel("footstepType", "stone");
+        doonce = false;
+
+
+
     }
 
     void Update()
@@ -105,7 +127,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetFloat("Vertical", 0f);
             }
             else 
-            { 
+            {
                 anim.SetFloat("Vertical", vertical);
                 anim.SetFloat("Horizontal", 0f);
             }
@@ -120,6 +142,11 @@ public class PlayerController : MonoBehaviour
                 jumping = true;
                 jumped = jump_length;
                 hop_frames = 10f;
+                shadow.SetActive(true);
+                shadow.transform.position = transform.position;
+                shadowtransform.velocity = body.velocity;
+                //playerFootsteps.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                playerJump.start();
             }
             else { //Debug.Log("Cannot Jump");
                    }
@@ -136,7 +163,8 @@ public class PlayerController : MonoBehaviour
                                                           //bit more by leaning in a direction lean out to go further,
                                                           //lean in to shorten, lean in a new direction to curve it
             ChangeY = Input.GetAxisRaw("Vertical")*air_mod;
-            body.velocity = new Vector2(body.velocity.x+ChangeX,body.velocity.y+ChangeY); 
+            body.velocity = new Vector2(body.velocity.x+ChangeX,body.velocity.y+ChangeY);
+            shadowtransform.velocity = new Vector2(shadowtransform.velocity.x + ChangeX, shadowtransform.velocity.y + ChangeY);
         }
         if (jumped > 0.0f)
         {
@@ -145,6 +173,8 @@ public class PlayerController : MonoBehaviour
             if (jumped <= jump_decay * 5)//player can jump or start walking up to 5 frames before they land
             {
                 jumping = false;
+                shadow.SetActive(false);
+                playerLand.start();
             }
         }
         else if (jumped < 0.0f) { jumped = 0.0f; }
@@ -211,6 +241,12 @@ public class PlayerController : MonoBehaviour
         {
             grace -= 0.01f;
             if (grace <= 0f) {
+                if (doonce == false)
+                {
+
+                    playerSplash.start();
+                    doonce = true;
+                }
                 Die("water");
             }
         }
@@ -250,15 +286,31 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Vertical", 0f);
         DeathScreen.SetActive(true);
         Debug.Log("You Have Died by"+ How);
-        GC.PauseGame();
+        
         HighScore.text = "Your highscore is " + highScore;
         FinalSCore.text = "Your Score was " + GC.score;
 
+        if(How == "water")
+        {
+            anim.SetBool("Waterdie", true);
+            
+        }
+        if(How == "Dog")
+        {
+            anim.SetBool("Dogdie",true);
+        }
 
+        StartCoroutine(WaittoDie());
         Playeralive = false;
     }
 
-
+    IEnumerator WaittoDie()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GC.PauseGame();
+        GC.ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        GC.gameOver.start();
+    }
 
     //void OnCollisionEnter2D(Collision2D collision)
     //{

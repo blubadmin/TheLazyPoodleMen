@@ -16,6 +16,10 @@ public class BlackDogBehaviour : MonoBehaviour
     // Start is called before the first frame update
 
 
+    FMOD.Studio.EventInstance dogHowl;
+    FMOD.Studio.EventInstance dogGrowl;
+
+
 
     void Start()
     {
@@ -23,6 +27,8 @@ public class BlackDogBehaviour : MonoBehaviour
         StartCoroutine(WaitToStart());
         dogsbody = GetComponent<Rigidbody2D>();
         PC = Player.GetComponent<PlayerController>();
+        dogHowl = FMODUnity.RuntimeManager.CreateInstance("event:/enemy/fx_dog_howl");
+        dogGrowl = FMODUnity.RuntimeManager.CreateInstance("event:/enemy/fx_dog_growl");
     }
 
     // Update is called once per frame
@@ -48,10 +54,22 @@ public class BlackDogBehaviour : MonoBehaviour
     IEnumerator WaitToStart() //Wait a few seconds to let player get hang of game
     {
         yield return new WaitForSeconds(dogwait);
+        dogHowl.start();
         dogactive = true;
         step = dogspeed * Time.deltaTime;
         Debug.Log("Dogs Awake");
+        StartCoroutine(DogGrowl());
 
+    }
+
+    IEnumerator DogGrowl()
+    {
+        while (true)
+        {
+
+            yield return new WaitForSeconds(Random.Range(2f, 6f));
+            dogGrowl.start();
+        }
     }
 
 
