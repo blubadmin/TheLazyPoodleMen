@@ -1,6 +1,8 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7906157783704651574
+
+--- !u!114 &-8090262262448659966
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +12,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_ambience_river
+
+  m_Name: snapshot:/main_game_loop
   m_EditorClassIdentifier: 
-  Path: event:/environment/fx_ambience_river
+  Path: snapshot:/main_game_loop
   Guid:
-    Data1: -112151253
-    Data2: 1197079269
-    Data3: -871902074
-    Data4: 1220521877
+    Data1: 2099470718
+    Data2: 1258901709
+    Data3: 1286480016
+    Data4: 1814004900
   Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 1
-  Is3D: 1
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 26411
---- !u!114 &-7492822840445435654
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8076082670425048718
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +58,9 @@ MonoBehaviour:
   - wood
   - water
   Exists: 1
---- !u!114 &-6558024188762206947
+
+--- !u!114 &-7771037934360573070
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,24 +70,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/game_over
+
+  m_Name: event:/environment/fx_ambience_river
   m_EditorClassIdentifier: 
-  Path: snapshot:/game_over
+  Path: event:/environment/fx_ambience_river
   Guid:
-    Data1: -1289410757
-    Data2: 1278301082
-    Data3: -106578303
-    Data4: 1639348346
+    Data1: -112151253
+    Data2: 1197079269
+    Data3: -871902074
+    Data4: 1220521877
   Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 0
+  - {fileID: -3895299501758185048}
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5603858617666310758
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 52822
+--- !u!114 &-7520624959377453519
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,18 +98,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/fx_ambience_seagulls
   m_EditorClassIdentifier: 
-  Path: ../Downloads/The Lazy Poodle Men-20220723T100725Z-001/The Lazy Poodle Men/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637941714038523308
-  FileSizes:
-  - Name: Desktop
-    Value: 1868
-  Exists: 1
---- !u!114 &-5121855026109429294
+  Path: event:/environment/fx_ambience_seagulls
+  Guid:
+    Data1: -550472716
+    Data2: 1103391139
+    Data3: 474280078
+    Data4: -1725980523
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26411
+--- !u!114 &-6498170975438477440
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +128,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/fx_dog/dogAction
+
+  m_Name: parameter:/fx_dog_variable/dogAction
+
   m_EditorClassIdentifier: 
   Name: dogAction
   StudioPath: 
@@ -128,7 +147,9 @@ MonoBehaviour:
   - growl
   - howl
   Exists: 1
---- !u!114 &-4469032616206789674
+
+--- !u!114 &-5581854651282926177
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,24 +159,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/fx_generic/fx_item_pickup
+
+  m_Name: event:/environment/fx_level_platform_wood_land
   m_EditorClassIdentifier: 
-  Path: event:/fx_generic/fx_item_pickup
+  Path: event:/environment/fx_level_platform_wood_land
   Guid:
-    Data1: -1682112823
-    Data2: 1292205736
-    Data3: 212494722
-    Data4: 1079596461
+    Data1: 351880023
+    Data2: 1098760144
+    Data3: -1116339834
+    Data4: -2107117656
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1730
---- !u!114 &-4410699094169919480
+
+  Length: 1906
+--- !u!114 &-3895299501758185048
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../Downloads/The Lazy Poodle Men-20220723T100725Z-001/The Lazy Poodle Men/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637941830013573734
+  FileSizes:
+  - Name: Desktop
+    Value: 1172832
+  Exists: 1
+--- !u!114 &-3629901391468402191
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,24 +212,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/fx_player_run
+
+  m_Name: event:/enemy/fx_dog_bark
   m_EditorClassIdentifier: 
-  Path: event:/player/fx_player_run
+  Path: event:/enemy/fx_dog_bark
   Guid:
-    Data1: 773484841
-    Data2: 1087437323
-    Data3: -1876781633
-    Data4: 1437569693
+    Data1: 1903003661
+    Data2: 1291561428
+    Data3: -363646331
+    Data4: 1137457637
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3000
---- !u!114 &-4235009111191197543
+  Length: 2345
+--- !u!114 &-2862569701962924709
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemy/fx_dog_growl
+  m_EditorClassIdentifier: 
+  Path: event:/enemy/fx_dog_growl
+  Guid:
+    Data1: -1440862689
+    Data2: 1165693527
+    Data3: -77296723
+    Data4: -1026389032
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2002
+--- !u!114 &-2602555068866843023
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +270,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_level_platform_wood_move
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_level_platform_wood_move
@@ -201,62 +280,18 @@ MonoBehaviour:
     Data3: -1668432740
     Data4: -861672354
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   IsStream: 0
+
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1750
---- !u!114 &-4194514065838144808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../Downloads/The Lazy Poodle Men-20220723T100725Z-001/The Lazy Poodle Men/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637941714038473246
-  FileSizes:
-  - Name: Desktop
-    Value: 1114880
-  Exists: 1
---- !u!114 &-2654298593051242064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_ambience_river_water
-  m_EditorClassIdentifier: 
-  Path: event:/environment/fx_ambience_river_water
-  Guid:
-    Data1: -232898045
-    Data2: 1143848938
-    Data3: -318070897
-    Data4: -579488729
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 26411
---- !u!114 &-2451499684131596603
+--- !u!114 &-2389655375981778183
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,7 +310,9 @@ MonoBehaviour:
     Data3: 1212858005
     Data4: -427651600
   Banks:
-  - {fileID: -4194514065838144808}
+
+  - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -283,7 +320,9 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1001
---- !u!114 &-2181298187966788666
+
+--- !u!114 &-1934552404622198250
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,52 +332,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/fx_generic/fx_player_bounce
+
+  m_Name: event:/enemy/fx_dog_variable
   m_EditorClassIdentifier: 
-  Path: event:/fx_generic/fx_player_bounce
-  Guid:
-    Data1: 1802463164
-    Data2: 1335992558
-    Data3: -1823024503
-    Data4: -885040689
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 461
---- !u!114 &-1140214267762994539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/enemy/fx_dog
-  m_EditorClassIdentifier: 
-  Path: event:/enemy/fx_dog
+  Path: event:/enemy/fx_dog_variable
   Guid:
     Data1: -1043540010
     Data2: 1182033161
     Data3: 100373421
     Data4: -1872407467
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -5121855026109429294}
+  - {fileID: -6498170975438477440}
   MinDistance: 1
   MaxDistance: 20
   Length: 6005
---- !u!114 &-242613522416663810
+--- !u!114 &-1850705283463521658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,14 +370,97 @@ MonoBehaviour:
     Data3: -497367414
     Data4: -238771594
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1001
+--- !u!114 &-1597997514671774303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../Downloads/The Lazy Poodle Men-20220723T100725Z-001/The Lazy Poodle Men/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637941830013613747
+  FileSizes:
+  - Name: Desktop
+    Value: 2042
+  Exists: 1
+--- !u!114 &-1253058448855341850
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/environment/fx_river_splash
+  m_EditorClassIdentifier: 
+  Path: event:/environment/fx_river_splash
+  Guid:
+    Data1: 1897509859
+    Data2: 1113008041
+    Data3: 30177457
+    Data4: 134709844
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1501
+--- !u!114 &-38129274876154508
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/fx_generic/fx_item_pickup
+  m_EditorClassIdentifier: 
+  Path: event:/fx_generic/fx_item_pickup
+  Guid:
+    Data1: -1682112823
+    Data2: 1292205736
+    Data3: 212494722
+    Data4: 1079596461
+  Banks:
+  - {fileID: -3895299501758185048}
+
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+
+  Length: 1730
+
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,33 +474,214 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5603858617666310758}
-  - {fileID: -4194514065838144808}
+
+  - {fileID: -1597997514671774303}
+  - {fileID: -3895299501758185048}
   EditorEvents:
-  - {fileID: -2654298593051242064}
-  - {fileID: -4410699094169919480}
-  - {fileID: -7906157783704651574}
-  - {fileID: -6558024188762206947}
-  - {fileID: 1626781764871624434}
-  - {fileID: 367892171926657595}
-  - {fileID: 4541071064391796419}
-  - {fileID: -4235009111191197543}
-  - {fileID: -242613522416663810}
-  - {fileID: -2181298187966788666}
-  - {fileID: -4469032616206789674}
-  - {fileID: -1140214267762994539}
-  - {fileID: 5702304503195961018}
-  - {fileID: 4719711222779710062}
-  - {fileID: -2451499684131596603}
-  - {fileID: 8692087849201552227}
+  - {fileID: 3412534376270606415}
+  - {fileID: -3629901391468402191}
+  - {fileID: -2862569701962924709}
+  - {fileID: 1077678560028303320}
+  - {fileID: -7771037934360573070}
+  - {fileID: 6882502124438336093}
+  - {fileID: 8896012151506076592}
+  - {fileID: -5581854651282926177}
+  - {fileID: 8344147248810261178}
+  - {fileID: -8090262262448659966}
+  - {fileID: -2602555068866843023}
+  - {fileID: -1850705283463521658}
+  - {fileID: 3155241119675937182}
+  - {fileID: -38129274876154508}
+  - {fileID: -1934552404622198250}
+  - {fileID: -1253058448855341850}
+  - {fileID: 1638536835577030672}
+  - {fileID: 1322837863918132575}
+  - {fileID: -2389655375981778183}
+  - {fileID: -7520624959377453519}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   StringsBanks:
-  - {fileID: -5603858617666310758}
-  cacheTime: 637941714038523308
+  - {fileID: -1597997514671774303}
+  cacheTime: 637941830013613747
   cacheVersion: 131591
---- !u!114 &367892171926657595
+--- !u!114 &1077678560028303320
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/player/fx_player_run
+  m_EditorClassIdentifier: 
+  Path: event:/player/fx_player_run
+  Guid:
+    Data1: 773484841
+    Data2: 1087437323
+    Data3: -1876781633
+    Data4: 1437569693
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &1322837863918132575
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/fx_generic/fx_system_game_over
+  m_EditorClassIdentifier: 
+  Path: event:/fx_generic/fx_system_game_over
+  Guid:
+    Data1: 1527261682
+    Data2: 1310114791
+    Data3: -511355490
+    Data4: -515952600
+  Banks:
+  - {fileID: -3895299501758185048}
+
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+
+  Length: 5000
+--- !u!114 &1638536835577030672
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/environment/fx_level_platform_rock_move
+  m_EditorClassIdentifier: 
+  Path: event:/environment/fx_level_platform_rock_move
+  Guid:
+    Data1: 31878379
+    Data2: 1159935119
+    Data3: -1785547080
+    Data4: -1466697530
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1625
+--- !u!114 &3155241119675937182
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: event:/fx_generic/fx_player_bounce
+  m_EditorClassIdentifier: 
+  Path: event:/fx_generic/fx_player_bounce
+  Guid:
+    Data1: 1802463164
+    Data2: 1335992558
+    Data3: -1823024503
+    Data4: -885040689
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 461
+--- !u!114 &3412534376270606415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/fx_ambience_river_water
+  m_EditorClassIdentifier: 
+  Path: event:/environment/fx_ambience_river_water
+  Guid:
+    Data1: -232898045
+    Data2: 1143848938
+    Data3: -318070897
+    Data4: -579488729
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 1
+  Is3D: 0
+
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+
+  Length: 26411
+--- !u!114 &6882502124438336093
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
+  m_Name: snapshot:/game_over
+  m_EditorClassIdentifier: 
+  Path: snapshot:/game_over
+  Guid:
+    Data1: -1289410757
+    Data2: 1278301082
+    Data3: -106578303
+    Data4: 1639348346
+  Banks:
+  - {fileID: -3895299501758185048}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8344147248810261178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,16 +700,17 @@ MonoBehaviour:
     Data3: -1577549907
     Data4: -1997412326
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7492822840445435654}
+  - {fileID: -8076082670425048718}
   MinDistance: 1
   MaxDistance: 20
   Length: 1001
---- !u!114 &1626781764871624434
+--- !u!114 &8896012151506076592
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,128 +720,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_level_platform_wood_land
+
+  m_Name: event:/enemy/fx_dog_howl
   m_EditorClassIdentifier: 
-  Path: event:/environment/fx_level_platform_wood_land
+  Path: event:/enemy/fx_dog_howl
   Guid:
-    Data1: 351880023
-    Data2: 1098760144
-    Data3: -1116339834
-    Data4: -2107117656
+    Data1: -669916100
+    Data2: 1186474787
+    Data3: -1167237483
+    Data4: 1576662911
   Banks:
-  - {fileID: -4194514065838144808}
+  - {fileID: -3895299501758185048}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1906
---- !u!114 &4541071064391796419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/main_game_loop
-  m_EditorClassIdentifier: 
-  Path: snapshot:/main_game_loop
-  Guid:
-    Data1: 2099470718
-    Data2: 1258901709
-    Data3: 1286480016
-    Data4: 1814004900
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4719711222779710062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_level_platform_rock_move
-  m_EditorClassIdentifier: 
-  Path: event:/environment/fx_level_platform_rock_move
-  Guid:
-    Data1: 31878379
-    Data2: 1159935119
-    Data3: -1785547080
-    Data4: -1466697530
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1687
---- !u!114 &5702304503195961018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_river_splash
-  m_EditorClassIdentifier: 
-  Path: event:/environment/fx_river_splash
-  Guid:
-    Data1: 1897509859
-    Data2: 1113008041
-    Data3: 30177457
-    Data4: 134709844
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1501
---- !u!114 &8692087849201552227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/fx_ambience_seagulls
-  m_EditorClassIdentifier: 
-  Path: event:/environment/fx_ambience_seagulls
-  Guid:
-    Data1: -550472716
-    Data2: 1103391139
-    Data3: 474280078
-    Data4: -1725980523
-  Banks:
-  - {fileID: -4194514065838144808}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 26411
+  Length: 6005
+

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7452114724868241301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.31, y: 6.91, z: 2}
-  m_LocalScale: {x: 0.44279277, y: 0.46055478, z: 1}
+  m_LocalScale: {x: 0.5324583, y: 0.48542476, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.020967, y: 8.692281, z: 1}
-  m_Center: {x: 0.006891964, y: 0.0029561797, z: 0}
+  m_Size: {x: 10.82467, y: 8.692277, z: 1}
+  m_Center: {x: -0.054061897, y: 0.002956259, z: 0}
 --- !u!212 &7452114724868241302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d1240fd7f4492646803d648c78d7543, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf190dfa41f564045ba920fc4a2ce1f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,3 +109,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4032e51f4da764b8eb1cb7fe1dcc49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scroll_speed: 3

@@ -9,6 +9,7 @@ public class PickupController : MonoBehaviour
     private GameObject Owner;
     private Vector3 target_position;
     private GameController GC;
+    FMOD.Studio.EventInstance pickup;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class PickupController : MonoBehaviour
         StartCoroutine(Movement());
         Owner = GameObject.FindGameObjectWithTag("GameController");
         GC = Owner.GetComponent < GameController > ();
+        pickup = FMODUnity.RuntimeManager.CreateInstance("event:/fx_generic/fx_item_pickup");
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class PickupController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            pickup.start();
             GC.pickup("Wolfsbane"); //Calls a method in game controller
             Destroy(gameObject); //Destroys itself
         }

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject blackdog;
     [SerializeField] private TMP_Text CurrentScore;
+    [SerializeField] private GameObject Background;
     private PlayerController playerController;
     private BlackDogBehaviour dogcontroller;
     private float GenX;
@@ -18,6 +19,11 @@ public class GameController : MonoBehaviour
     private float rs;
     private bool isPaused = false;
     public int score;
+
+    public FMOD.Studio.EventInstance ambience;
+    public FMOD.Studio.EventInstance gameOver;
+
+    FMOD.Studio.EventInstance platformMoveStone;
 
 
     // Start is called before the first frame update
@@ -28,11 +34,17 @@ public class GameController : MonoBehaviour
         Instantiate(Platforms[0], new Vector3(0, 30, 2),Quaternion.identity);
         StartCoroutine(ItemGenerator());
         StartCoroutine(PlatformGenerator());
+        StartCoroutine(BGmover());
         StartCoroutine(Score());
         playerController = player.GetComponent<PlayerController>();
         dogcontroller = blackdog.GetComponent<BlackDogBehaviour>();
         rs = playerController.runSpeed;
         Time.timeScale = 1.0f;
+        ambience = FMODUnity.RuntimeManager.CreateInstance("event:/environment/fx_ambience_river");
+        gameOver = FMODUnity.RuntimeManager.CreateInstance("event:/fx_generic/fx_system_game_over");
+        platformMoveStone = FMODUnity.RuntimeManager.CreateInstance("event:/environment/fx_level_platform_rock_move");
+        ambience.start();
+
     }
 
     // Update is called once per frame
@@ -78,9 +90,19 @@ public class GameController : MonoBehaviour
             GenY = Random.Range(MinY,MaxY);
             GameObject Platform = Platforms[Random.Range(0, Platforms.Length)];
             Instantiate(Platform, new Vector3(GenX, GenY, 2),Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            platformMoveStone.start();
+            yield return new WaitForSeconds(2);
         }
 
+    }
+
+    IEnumerator BGmover()
+    {
+        while (true)
+        {
+            Instantiate(Background, new Vector3(0, 40, 15), Quaternion.identity);
+            yield return new WaitForSeconds(10);
+        }
     }
 
     public GameObject FindClosestTag(string Tag)
