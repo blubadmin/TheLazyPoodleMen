@@ -1,6 +1,8 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+
 --- !u!114 &-8090262262448659966
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,6 +12,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: snapshot:/main_game_loop
   m_EditorClassIdentifier: 
   Path: snapshot:/main_game_loop
@@ -28,6 +31,7 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 0
 --- !u!114 &-8076082670425048718
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +58,9 @@ MonoBehaviour:
   - wood
   - water
   Exists: 1
+
 --- !u!114 &-7771037934360573070
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,6 +70,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_ambience_river
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_ambience_river
@@ -82,6 +89,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 52822
 --- !u!114 &-7520624959377453519
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,6 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/environment/fx_ambience_seagulls
   m_EditorClassIdentifier: 
@@ -109,6 +118,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 26411
 --- !u!114 &-6498170975438477440
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +128,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+
   m_Name: parameter:/fx_dog_variable/dogAction
+
   m_EditorClassIdentifier: 
   Name: dogAction
   StudioPath: 
@@ -135,7 +147,9 @@ MonoBehaviour:
   - growl
   - howl
   Exists: 1
+
 --- !u!114 &-5581854651282926177
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +159,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_level_platform_wood_land
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_level_platform_wood_land
@@ -155,14 +170,17 @@ MonoBehaviour:
     Data4: -2107117656
   Banks:
   - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1906
 --- !u!114 &-3895299501758185048
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,6 +189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
@@ -183,6 +202,7 @@ MonoBehaviour:
     Value: 1172832
   Exists: 1
 --- !u!114 &-3629901391468402191
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +212,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/enemy/fx_dog_bark
   m_EditorClassIdentifier: 
   Path: event:/enemy/fx_dog_bark
@@ -210,6 +231,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 2345
 --- !u!114 &-2862569701962924709
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,6 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/enemy/fx_dog_growl
   m_EditorClassIdentifier: 
@@ -237,6 +260,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 2002
 --- !u!114 &-2602555068866843023
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,6 +270,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_level_platform_wood_move
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_level_platform_wood_move
@@ -257,13 +282,16 @@ MonoBehaviour:
   Banks:
   - {fileID: -3895299501758185048}
   IsStream: 0
+
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1750
 --- !u!114 &-2389655375981778183
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +310,9 @@ MonoBehaviour:
     Data3: 1212858005
     Data4: -427651600
   Banks:
+
   - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -290,7 +320,9 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1001
+
 --- !u!114 &-1934552404622198250
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,6 +332,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/enemy/fx_dog_variable
   m_EditorClassIdentifier: 
   Path: event:/enemy/fx_dog_variable
@@ -338,12 +371,14 @@ MonoBehaviour:
     Data4: -238771594
   Banks:
   - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1001
 --- !u!114 &-1597997514671774303
 MonoBehaviour:
@@ -366,6 +401,7 @@ MonoBehaviour:
     Value: 2042
   Exists: 1
 --- !u!114 &-1253058448855341850
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,6 +411,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_river_splash
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_river_splash
@@ -393,6 +430,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 1501
 --- !u!114 &-38129274876154508
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,6 +440,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/fx_generic/fx_item_pickup
   m_EditorClassIdentifier: 
   Path: event:/fx_generic/fx_item_pickup
@@ -412,13 +451,16 @@ MonoBehaviour:
     Data4: 1079596461
   Banks:
   - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 1730
+
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +474,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+
   - {fileID: -1597997514671774303}
   - {fileID: -3895299501758185048}
   EditorEvents:
@@ -463,6 +506,7 @@ MonoBehaviour:
   cacheTime: 637941830013613747
   cacheVersion: 131591
 --- !u!114 &1077678560028303320
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,6 +516,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/player/fx_player_run
   m_EditorClassIdentifier: 
   Path: event:/player/fx_player_run
@@ -490,6 +535,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 3000
 --- !u!114 &1322837863918132575
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -499,6 +545,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/fx_generic/fx_system_game_over
   m_EditorClassIdentifier: 
   Path: event:/fx_generic/fx_system_game_over
@@ -509,14 +556,17 @@ MonoBehaviour:
     Data4: -515952600
   Banks:
   - {fileID: -3895299501758185048}
+
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 5000
 --- !u!114 &1638536835577030672
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,6 +576,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/environment/fx_level_platform_rock_move
   m_EditorClassIdentifier: 
   Path: event:/environment/fx_level_platform_rock_move
@@ -544,6 +595,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 1625
 --- !u!114 &3155241119675937182
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,6 +605,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/fx_generic/fx_player_bounce
   m_EditorClassIdentifier: 
   Path: event:/fx_generic/fx_player_bounce
@@ -592,12 +645,15 @@ MonoBehaviour:
   - {fileID: -3895299501758185048}
   IsStream: 1
   Is3D: 0
+
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+
   Length: 26411
 --- !u!114 &6882502124438336093
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,6 +663,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: snapshot:/game_over
   m_EditorClassIdentifier: 
   Path: snapshot:/game_over
@@ -653,6 +710,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 1001
 --- !u!114 &8896012151506076592
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -662,6 +720,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+
   m_Name: event:/enemy/fx_dog_howl
   m_EditorClassIdentifier: 
   Path: event:/enemy/fx_dog_howl
@@ -679,3 +738,4 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6005
+

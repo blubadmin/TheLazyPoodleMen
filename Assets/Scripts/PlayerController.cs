@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class PlayerController : MonoBehaviour
 
 {
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private GameController GC;
     private float highScore;
-
+    FMOD.Studio.EventInstance playerJump;
 
     public bool Playeralive;
     public bool jumping;
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
         GC = gameController.GetComponent<GameController>();
         Playeralive = true;
         highScore = PlayerPrefs.GetFloat("highScore");
+
         shadow = body.transform.GetChild(0).gameObject;
         shadowtransform = shadow.GetComponent<Rigidbody2D>();
         shadow.SetActive(false);
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour
         playerFootsteps = FMODUnity.RuntimeManager.CreateInstance("event:/player/fx_player_footsteps");
         playerFootsteps.setParameterByNameWithLabel("footstepType", "stone");
         doonce = false;
+
 
 
 
@@ -141,6 +144,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("jumping", true);
                 jumping = true;
                 jumped = jump_length;
+                playerJump.start();
                 hop_frames = 10f;
                 shadow.SetActive(true);
                 shadow.transform.position = transform.position;
